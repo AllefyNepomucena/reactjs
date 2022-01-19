@@ -4,26 +4,20 @@ import Header from './components/Header'
 /**
  * Componente 
  * Propriedade
- * Estado 
+ * Estado & Imutabilidade 
  */
  function App( ){
+    const projects= ['Desenvolvimento de App', 'Front-end web']
+
      return (
         //fragment = <> </>
         <> 
-     <Header title= 'Homepage'> 
-        <ul>
-          <li>Homepage</li>
-          <li>Projects</li>
-        </ul>
-        </Header>
-     <Header title= 'Projects'>
-        <ul>
-           <li>Homepage</li>
-           <li>Projects</li>
-           <li>Login</li>
-        </ul>
+   
+     <Header title= 'Projects'/>
         
-         </Header>
+        <ul>
+          {projects.map(project => <li key={project}>{project}</li>)}
+        </ul>
         </>
         
 
