@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import Header from './components/Header'
 
 /**
@@ -7,7 +7,16 @@ import Header from './components/Header'
  * Estado & Imutabilidade 
  */
  function App( ){
-    const projects= ['Desenvolvimento de App', 'Front-end web']
+    const [projects , setProjects]= useState(['Desenvolvimento de App', 'Front-end web'])
+
+
+     
+       function handleAddProject (){
+         //projects.push(`Novo Projeto ${Date.now()} `)
+         setProjects([...projects , `Novo Projeto ${Date.now()}`])
+
+         console.log(projects)
+       }
 
      return (
         //fragment = <> </>
@@ -18,6 +27,8 @@ import Header from './components/Header'
         <ul>
           {projects.map(project => <li key={project}>{project}</li>)}
         </ul>
+        <button type="button" onClick={handleAddProject}>Adicionar Projeto</button>
+
         </>
         
 
