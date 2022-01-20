@@ -1,4 +1,7 @@
 import React , {useState} from "react";
+
+import './components/App.css'
+ 
 import Header from './components/Header'
 
 /**
