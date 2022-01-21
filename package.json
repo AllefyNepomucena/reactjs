@@ -5,6 +5,10 @@
   "repository": "https://github.com/AllefyNepomucena/reactjs.git",
   "author": "AllefyNepomucena <allefy.s.nepomucena@gmail.com>",
   "license": "MIT",
+   "scripts": {
+     "dev": "webpack-dev-server --mode development",
+     "build": "webpack --mode production"
+   },
   "dependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.7",
