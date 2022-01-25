@@ -1,7 +1,8 @@
 import React , {useState} from "react";
-
+import api from './services/api'
+ 
 import './components/App.css'
-import backgroundImage from './assets/backgroud.jpg'
+
 import Header from './components/Header'
 
 /**
