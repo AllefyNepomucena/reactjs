@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React , {useState, useEffect } from "react";
 import api from './services/api'
 
 
@@ -15,7 +15,11 @@ import Header from './components/Header'
  function App( ){
     const [projects , setProjects]= useState(['Desenvolvimento de App', 'Front-end web'])
 
-
+   useEffect(() => {
+      api.get('projects').then(response => {
+         console.log(response)
+      })
+   } , [])
      
        function handleAddProject (){
          //projects.push(`Novo Projeto ${Date.now()} `)
@@ -30,7 +34,7 @@ import Header from './components/Header'
    
      <Header title= 'Projects'/>
 
-     <img width={300} src={backgroundImage}/>
+    
         
         <ul>
           {projects.map(project => <li key={project}>{project}</li>)}
